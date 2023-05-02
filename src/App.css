@@ -1,38 +1,106 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
+  height: 100vh;
+  width: 100vw;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.main-video-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidebar-toggle {
+  position: fixed;
+  bottom: 20px;
+  padding: 10px 20px;
+  background-color: rgb(63 63 70);
+  color: #fff;
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  background-color: white;
+  z-index: 100;
+  transition: all 0.3s ease;
+  transform: translateX(100%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar.show {
+  transform: translateX(0);
+}
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(63 63 70);
+  color: #fff;
+  padding: 10px;
+}
+.mute-icon {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar-header h3 {
+  font-size: 20px;
+  margin: 0;
+}
+.sidebar-header button {
+  cursor: pointer;
+}
+
+.sidebar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.sidebar li:last-child {
+  border-bottom: none;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-details {
+  display: flex;
+}
+
+.user-details p {
+  margin: 0;
+  font-weight: bold;
 }
