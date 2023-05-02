@@ -1,7 +1,7 @@
 import React from "react";
 import { BiMicrophone, BiMicrophoneOff } from "react-icons/bi";
 
-const UserList = ({ user, handleToggleMute, index }) => {
+const UserListItem = ({ user, handleToggleMute, index }) => {
   return (
     <div className="user">
       <div className="user-details">
@@ -14,4 +14,4 @@ const UserList = ({ user, handleToggleMute, index }) => {
   );
 };
 
-export default UserList;
+export default UserListItem;

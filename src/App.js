@@ -2,25 +2,24 @@ import React, { useState } from "react";
 import Card from "./Card";
 import "./App.css";
 import { FaTimes } from "react-icons/fa";
-import UserList from "./UserList";
+import UserListItem from "./UserListItem";
 
 const users = [
   {
     name: "Sohan Agashimani",
-    image: "https://picsum.photos/id/237/200",
+    image: "https://picsum.photos/id/1/200",
     muted: false,
   },
   {
     name: "Darshan Agashimani",
-    image: "https://picsum.photos/id/14/200",
+    image: "https://picsum.photos/id/8/200",
     muted: true,
   },
   {
     name: "Neil Karadi",
-    image: "https://picsum.photos/id/14/200",
+    image: "https://picsum.photos/id/12/200",
     muted: true,
   },
-
 ];
 
 function App() {
@@ -51,7 +50,7 @@ function App() {
         <ul>
           {userList.map((user, index) => (
             <li>
-              <UserList {...{ user, index, handleToggleMute }} />
+              <UserListItem {...{ user, index, handleToggleMute }} />
             </li>
           ))}
         </ul>
