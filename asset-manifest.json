@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/gmeet/static/css/main.084c45df.css",
+    "main.js": "/gmeet/static/js/main.0415ffdf.js",
+    "static/js/787.a85e094b.chunk.js": "/gmeet/static/js/787.a85e094b.chunk.js",
+    "index.html": "/gmeet/index.html",
+    "main.084c45df.css.map": "/gmeet/static/css/main.084c45df.css.map",
+    "main.0415ffdf.js.map": "/gmeet/static/js/main.0415ffdf.js.map",
+    "787.a85e094b.chunk.js.map": "/gmeet/static/js/787.a85e094b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.084c45df.css",
+    "static/js/main.0415ffdf.js"
+  ]
+}
