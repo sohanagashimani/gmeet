@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import Card from "./Card";
+import Card from "./components/Card";
 import "./App.css";
-import { FaTimes } from "react-icons/fa";
-import UserListItem from "./UserListItem";
+import SideBar from "./components/SideBar";
 
 const users = [
   {
@@ -40,21 +39,9 @@ function App() {
 
   return (
     <div className="App">
-      <div className={`sidebar ${showSidebar ? "show" : ""}`}>
-        <div className="sidebar-header">
-          <h3>User List</h3>
-          <button onClick={toggleSidebar}>
-            <FaTimes />
-          </button>
-        </div>
-        <ul>
-          {userList.map((user, index) => (
-            <li>
-              <UserListItem {...{ user, index, handleToggleMute }} />
-            </li>
-          ))}
-        </ul>
-      </div>
+      <SideBar
+        {...{ handleToggleMute, toggleSidebar, userList, showSidebar }}
+      />
       <div className="main-video-container">
         {userList.map((user, index) => (
           <Card

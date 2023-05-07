@@ -3,7 +3,6 @@ import "./Card.css";
 import { BiMicrophone, BiMicrophoneOff } from "react-icons/bi";
 
 function Card({ user, onToggleMute }) {
-  console.log(user);
   return (
     <div className="card">
       <div className="card-header">
